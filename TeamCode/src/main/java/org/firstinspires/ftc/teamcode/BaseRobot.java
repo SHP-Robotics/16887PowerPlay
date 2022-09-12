@@ -18,8 +18,6 @@ import org.firstinspires.ftc.teamcode.subsystems.DriveSubsystem;
 
 public class BaseRobot extends OpMode {
     public DriveSubsystem drive;
-    public ArmSubsystem arm;
-    public ScoopSubsystem scoop;
 
     public SHPMotor intake;
 
@@ -39,10 +37,9 @@ public class BaseRobot extends OpMode {
 
         // Instantiate your subsystems and devices
         drive = new DriveSubsystem(hardwareMap);
-        arm = new ArmSubsystem(hardwareMap);
-        scoop = new ScoopSubsystem(hardwareMap);
 
-        intake = new SHPMotor(hardwareMap, "intake");
+
+        //intake = new SHPMotor(hardwareMap, "intake");
     }
 
     // this function runs when you hit the start button after the init button
