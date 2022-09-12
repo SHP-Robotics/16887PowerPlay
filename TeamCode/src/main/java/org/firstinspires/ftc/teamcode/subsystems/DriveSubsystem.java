@@ -12,7 +12,7 @@ import org.firstinspires.ftc.teamcode.shplib.hardware.sensors.SHPIMU;
 
 public class DriveSubsystem extends Subsystem {
     private final SHPMecanumDrive drive;
-    private final SHPIMU imu;
+    //private final SHPIMU imu;
 
 //    private final RoadRunnerMecanumDrive rr;
 
@@ -23,20 +23,20 @@ public class DriveSubsystem extends Subsystem {
 //        drive.reverseAll();
 //        drive.enableVelocityPID(0.03, 3.0, AngleUnit.RADIANS);
 
-        imu = new SHPIMU(hardwareMap, AxesOrder.ZYX, AxesSigns.PPN);
+        //imu = new SHPIMU(hardwareMap, AxesOrder.ZYX, AxesSigns.PPN);
 //        imu = new SHPIMU(hardwareMap);
 
 //        rr = new RoadRunnerMecanumDrive()
     }
 
     public void mecanum(double leftY, double leftX, double rightX) {
-        Vector2d vector = new Vector2d(
-                leftY,
-                leftX
-        ).rotated(-imu.getYaw());
+//        Vector2d vector = new Vector2d(
+//                leftY,
+//                leftX
+//        ).rotated(-imu.getYaw());
 //
-        drive.mecanum(vector.getX(), vector.getY(), rightX);
-//        drive.mecanum(leftY, leftX, rightX);
+//        drive.mecanum(vector.getX(), vector.getY(), rightX);
+        drive.mecanum(leftY, leftX, rightX);
     }
 
     @Override
